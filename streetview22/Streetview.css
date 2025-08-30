@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #130a0e, #122a52);
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #af4caa, #2196F3);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Main Content Styling */
+.main {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.submain {
+    width: 800px;
+    margin: 0 auto 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure container alignment */
+}
+
+/* Dynamic Image */
+#dynamicImage {
+    width: 100%; /* Adjusts to parent container */
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Multi-Image Container */
+#multiImageContainer {
+    width: 100%; /* Matches dynamic image width */
+    height: auto; /* Adjusts to content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+#multiImageContainer img {
+    flex: 1; /* Ensures images scale evenly */
+    max-width: calc(33.33% - 10px); /* Three images in a row with spacing */
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#multiImageContainer img:hover {
+    transform: scale(1.05); /* Slight enlargement for hover effect */
+    opacity: 0.9; /* Slight dimming effect */
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#infoContainer{
+    color: #ffff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .submain {
+        width: 90%;
+        height: auto;
+    }
+
+    #dynamicImage {
+        width: 100%;
+        height: auto;
+    }
+
+    #multiImageContainer {
+        flex-direction: column; /* Stack images vertically */
+        gap: 15px;
+    }
+
+    #multiImageContainer img {
+        max-width: 90%; /* Adjust for smaller screens */
+    }
+
+    button {
+        width: 90%;
+        font-size: 16px;
+    }
+}

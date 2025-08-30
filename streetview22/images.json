@@ -1,0 +1,48 @@
+[
+    { "type": "single", "id": 0, "src": "CollageFolder\\Street View\\1.jpg","info":"The main Enterence of the collage"},
+    { "type": "single", "id": 1, "src": "CollageFolder\\Street View\\2.0.jpg","info":" Main Enterence to Moving towords Parking" },
+    { "type": "single", "id": 2, "src": "CollageFolder\\Street View\\2.1.jpg","info":"Moving towards CSE department and also parking" },
+    { "type": "single", "id": 3, "src": "CollageFolder\\Street View\\3.1.jpg","info":"Moving towards CSE department and also parking"},
+    { "type": "single", "id": 4, "src": "CollageFolder\\Street View\\3.jpg","info":"Moving towards CSE department and also parking"},
+    { "type": "single", "id": 4, "src": "CollageFolder\\Street View\\4.1.jpg","info":"Moving towards CSE department and also parking"},
+    { "type": "single", "id": 4, "src": "CollageFolder\\Street View\\4.2.jpg","info":"Moving towards CSE department and also parking"},
+    { "type": "single", "id": 4, "src": "CollageFolder\\Street View\\4.3.jpg","info":"Towards Library"},
+    { "type": "single", "id": 4, "src": "CollageFolder\\Street View\\4.5.jpg","info":"Towards Library"},
+    { "type": "single", "id": 4, "src": "CollageFolder\\Street View\\5.1.jpg","info":"Towards Library"},
+    { 
+        "type": "multi",
+        "id": 3,
+        "src": "corner.jpg",
+        "options": [
+            { "type":"single","id": 5, "path": "CollageFolder\\Street View\\6.jpg" },
+            { "type":"single","id": 6, "path": "CollageFolder\\Street View\\7.jpg" },
+            { "type": "single", "id": 7, "path": "CollageFolder\\Street View\\5.jpg"}
+        ]
+    },
+    [
+        { "type": "single", "id": 8, "src": "CollageFolder\\Street View\\6.1.jpg" ,"info":"Towards Dblock and play ground"},
+        { "type": "single", "id": 9, "src": "CollageFolder\\Street View\\6.2.jpg" ,"info":"Towards Dblock and play ground"},
+        { "type": "single", "id": 10, "src": "CollageFolder\\Street View\\6.3.jpg" ,"info":"Towards Dblock and play ground"},
+        { "type": "single", "id": 11, "src": "CollageFolder\\Street View\\6.4.jpg","info":"Towards Dblock and play ground"},
+        { "type": "single", "id": 12, "src": "CollageFolder\\Street View\\6.5.jpg","info":"Towards play ground"},
+        { "type": "single", "id": 13, "src": "CollageFolder\\Street View\\6.6.jpg","info":"Play ground"},
+        { "type": "single", "id": 14, "src": "CollageFolder\\Street View\\6.7.jpg","info":"Play ground"}
+    ],
+
+    [
+    { "type": "single", "id": 201, "src": "CollageFolder\\CSE PHOTOS\\2.jpg" },
+    { "type": "single", "id": 202, "src": "CollageFolder\\CSE PHOTOS\\3.jpg" }
+    ],
+
+    [
+        { "type": "single", "id": 101, "src": "CollageFolder\\Street View\\8.jpg","info":"Towards Canteen & Boys Hostel"},
+        { "type": "single", "id": 101, "src": "CollageFolder\\Street View\\9.0.jpg" ,"info":"Towards Canteen & Boys Hostel"},
+        { "type": "single", "id": 101, "src": "CollageFolder\\Street View\\9.1.jpg","info":"Towards Canteen & Boys Hostel" },
+        { "type": "single", "id": 101, "src": "CollageFolder\\Street View\\9.2.jpg","info":"Towards Canteen & Boys Hostel" },
+        { "type": "single", "id": 101, "src": "CollageFolder\\Street View\\9.3.jpg","info":"Boys Hostel" },
+        { "type": "single", "id": 101, "src": "CollageFolder\\Street View\\9.4.jpg","info":"Boys Hostel" },
+        { "type": "single", "id": 101, "src": "CollageFolder\\Street View\\9.5.jpg","info":"Towards Boys Hostel" },
+        { "type": "single", "id": 101, "src": "CollageFolder\\Street View\\9.6.jpg" ,"info":"Towards Boys Hostel"},
+        { "type": "single", "id": 101, "src": "CollageFolder\\Street View\\9.7.jpg" ,"info":" Boys Hostel"}
+    ]
+]

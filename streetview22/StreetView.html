@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetView</title>
+    <link rel="stylesheet" href="Streetview.css">
+</head>
+<body>
+    <header>
+        <h1>B.L.D.E.A's V.P. Dr. P.G. Halakatti College of Engineering and Technology</h1>
+        <p>Street View</p>
+    </header>
+    <div class="main" style="display: flex;">
+        <div class="submain">
+            <!-- Dynamic single image -->
+            <img id="dynamicImage" src="" alt="Dynamic Image" style="display:none;">
+            
+            <!-- Multi-image container -->
+            <div id="multiImageContainer" style="display:none; justify-content: space-around;">
+                <img id="multiImage1" src="" alt="Option 1" style="width: 300px; height: auto;">
+                <img id="multiImage2" src="" alt="Option 2" style="width: 300px; height: auto;">
+                <img id="multiImage3" src="" alt="Option 3" style="width: 300px; height: auto;">
+            </div>
+        </div>
+
+        <!-- Information container -->
+        <div id="infoContainer" style="margin-left: 20px; width: 300px; font-size: 16px; line-height: 1.5; border-left: 2px solid #ccc; padding-left: 10px;">
+            <p>Image information will appear here.</p>
+        </div>
+    </div>
+
+    <!-- Buttons for controlling the slideshow -->
+    <div id="btn" style="margin-left: 35%; margin-bottom: 35px;">
+        <button id="startBtn">Start</button>
+        <button id="nextBtn" style="display:none;">Next</button>
+        <button id="backBtn" style="display:none;">Back</button>
+    </div>
+    <!-- Link to the JavaScript file -->
+    <script src="streetView.js"></script>  
+</body>
+</html>
