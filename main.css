@@ -1,0 +1,220 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #130a0e, #122a52);  /* Gradient background */
+    color: #ffffff;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    gap: 20px;
+    background: linear-gradient(to right, #af4caa, #2196F3); /* Gradient header */
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1c1c;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.navbar-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    background: linear-gradient(to right, #FF5733, #FFC300);  /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.nav-item a:hover {
+    background: linear-gradient(to right, #af4caa, #2196F3);  /* Button gradient */
+    color: #000;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #FF5733;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Division Styling */
+.division {
+    background: linear-gradient(to bottom, #130a0e, #122a52);
+    border:2px solid red;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.division:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.4);
+}
+
+p {
+    color: #e0e0e0;
+    text-align: justify;
+}
+
+/* Section Titles */
+h3 {
+    color: #FF5733;  /* Highlighted title */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Images & Videos */
+.division img, .division video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Contact & Map Section */
+#map {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#map pre {
+    background-color: #1c1c1c;
+    border: 2px solid #FF5733;
+    padding: 15px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1em;
+    width: 40%;
+}
+
+#map iframe {
+    flex: 1;
+    border-radius: 5px;
+    border: 2px solid #FF5733;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #map {
+        flex-direction: column;
+    }
+
+    #map pre {
+        width: 100%;
+    }
+}
+
+#intro {
+    text-align: center;
+}
+
+/* Centering Video and 360° Image */
+.division video,
+.division iframe {
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 2px solid #FF5733;
+}
+
+/* Specific Styling for the 360° Image */
+.division iframe {
+    max-width: 100%;
+    width: 600px; /* Adjust the width if needed */
+    height: 450px; /* Adjust the height if needed */
+}
+
+/* Styling for the division containing the 360° images */
+.iframe-container {
+    display: flex;
+    gap: 20px; /* Space between iframes */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap if there's not enough space */
+}
+
+.iframe-container iframe {
+    flex: 1;
+    min-width: 300px; /* Minimum width to maintain a reasonable size */
+    height: 350px; /* Adjusted height for a good aspect ratio */
+    border-radius: 5px;
+    border: 2px solid #FF5733;
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .iframe-container {
+        flex-direction: column; /* Stack the iframes on smaller screens */
+    }
+
+    .iframe-container iframe {
+        width: 100%; /* Full width for stacked iframes */
+        height: 300px; /* Reduce height for better fit */
+    }
+}
