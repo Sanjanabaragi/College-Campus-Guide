@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boys-Hostel and GYM</title>
+  <link rel="stylesheet" href="boyscss.css">
+</head>
+<body>
+  <header>
+    <h1>Boys-Hostel</h1>
+</header>
+<br><br>
+<div class="video">
+    <video controls class="media-video" autoplay  muted loop controls>
+        <source src="hostel.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+</div>
+<!-- Image Gallery Section -->
+<div class="image-gallery">
+  <h3>Boys-Hostel</h3>
+  <div class="image-container">
+      <img src="1.jpg" onclick="openLightbox(this)">
+      <img src="2.jpg" onclick="openLightbox(this)">
+      <img src="3.jpg" onclick="openLightbox(this)">
+      <img src="4.jpg" onclick="openLightbox(this)">
+      <img src="5.jpg" onclick="openLightbox(this)">
+      <img src="6.jpg" onclick="openLightbox(this)">
+  </div>
+</div>
+<div class="image-gallery">
+  <h3>GYM</h3>
+  <div class="image-container">
+      <img src="gym8.jpg" onclick="openLightbox(this)">
+      <img src="gym1.jpg" onclick="openLightbox(this)">
+      <img src="gym2.jpg" onclick="openLightbox(this)">
+      <img src="gym3.jpg" onclick="openLightbox(this)">
+      <img src="gym7.jpg" onclick="openLightbox(this)">
+      <img src="gym6.jpg" onclick="openLightbox(this)">
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close-btn">&times;</span>
+  <img id="lightbox-img" class="lightbox-content">
+</div>
+<script src="boysjs.js"></script>
+</body>
+</html>
