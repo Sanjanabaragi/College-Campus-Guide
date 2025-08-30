@@ -1,0 +1,198 @@
+/* ECE.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Set a clean font for the body */
+    line-height: 1.6; /* Improve readability */
+    background: linear-gradient(to bottom, #130a0e, #122a52);  /* Light background color */
+}
+
+/* Sticky Header Styles */
+header {
+    /* position: sticky; Make the header sticky */
+    top: 0; /* Stick to the top */
+    background: linear-gradient(to right, #af4caa, #2196F3); /* Ensure background color is set */
+    z-index: 1000; /* Ensure it stays above other content */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center text */
+    transition: background-color 0.3s; /* Smooth transition for background change */
+}
+
+h1 {
+    margin-bottom: 10px; /* Space below the header */
+}
+
+/* Navigation Styles */
+nav {
+    margin: 20px 0; /* Margin around nav */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center navigation links */
+    padding: 0; /* Remove padding */
+}
+
+nav li {
+    margin: 0 15px; /* Space between navigation items */
+}
+
+nav a {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Image Styles */
+#image {
+    width: 150px; /* Set width to 150px */
+    height: 150px; /* Set height to 150px for square format */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    display: block; /* Make image a block element */
+    margin: 20px auto; /* Center image with margin */
+}
+
+/* Content Styles */
+div {
+    max-width: 1000px; /* Limit content width */
+    margin: 20px auto; /* Center content */
+    padding: 20px; /* Padding inside content */
+    background-color: white; /* White background for content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h2, h3 {
+    margin-bottom: 15px; /* Space below headings */
+}
+
+p {
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+/* Image in About Section */
+img {
+    align-items: center;
+    max-width: 100px; /* Limit width for profile image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10%; /* Circular image */
+    margin-right: 10px; /* Space between image and text */
+    float: left; /* Float left for text wrapping */
+}
+
+pre {
+    margin: 0; /* Remove margin */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Specific font for preformatted text */
+}
+/* Centering Image Styles */
+.image-container {
+    text-align: center; /* Center the image */
+    margin: 20px 0; /* Add margin above and below */
+}
+
+.image-container img {
+    max-width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+.video {
+    max-width: 800px; /* Limit content width */
+    margin: 20px auto; /* Center content */
+    padding: 20px; /* Padding inside content */
+    background-color: white; /* White background for content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .media-video {
+    width: 100%; /* Make the video take the full width of the div */
+    height: auto; /* Keep aspect ratio */
+  }
+
+  .image-gallery {
+    text-align: center; /* Center-align text in the gallery */
+    padding: 20px;
+    background-color: white; /* Add a white background to the gallery */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.image-gallery h3 {
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 1.5em;
+    color: #333; /* Darker heading color */
+}
+
+.image-container {
+    display: flex; /* Use flexbox for image layout */
+    justify-content: center; /* Center the images horizontally */
+    flex-wrap: wrap; /* Allow wrapping if there are too many images */
+    gap: 15px; /* Space between images */
+}
+
+.image-container img {
+    width: 200px; /* Set consistent width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    cursor: pointer; /* Pointer cursor for clickable images */
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Lightbox Overlay */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    z-index: 1000; /* Place above everything else */
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%; /* Limit image width */
+    max-height: 90%; /* Limit image height */
+    object-fit: contain; /* Maintain aspect ratio */
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}

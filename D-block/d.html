@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Block</title>
+    <link rel="stylesheet" href="d.css">
+</head>
+<body>
+    <header>
+        <h1 style="color: gainsboro;">D-BLOCK</h1>
+        
+    </header>
+    <br><br>
+    <div class="video">
+
+        <video controls class="media-video">
+            <source src="Dvideo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+
+        
+    </div>
+    <div>
+        <br>
+        <h2>Vision</h2>
+        <p>
+            Students focus on building a strong foundation in core subjects like Mathematics, Physics, and Chemistry, which are essential across all fields of engineering.
+        </p>
+        <h2>
+            Mission
+        </h2>
+        <p>
+            To enhance the potential of first-year engineering students by providing a strong technical education foundation and practical training across core engineering disciplines. This mission aims to instill professional ethics, foster critical thinking, and cultivate problem-solving abilities. Through hands-on learning, exposure to various engineering domains, and a focus on innovation, students are encouraged to explore new ideas and entrepreneurial opportunities. The mission prioritizes the holistic development of students, preparing them to contribute meaningfully to society while promoting integrity, teamwork, and ethical practices in their professional journey.
+        </p>
+    </div>
+
+    <div class="image-gallery">
+        <h3>Labs</h3>
+        <div class="image-container">
+            <img src="lab1.jpg" alt="ECE Lab" onclick="openLightbox(this)">
+            <img src="lab2.jpg" alt="ECE Seminar" onclick="openLightbox(this)">
+            <img src="lab3.jpg" alt="ECE Students Project" onclick="openLightbox(this)">
+            <img src="lab4.jpg" alt="ECE Students Project" onclick="openLightbox(this)">
+            <img src="lab5.jpg" alt="ECE Students Project" onclick="openLightbox(this)">
+        </div>
+    </div>
+
+    <div class="image-gallery">
+        <h3>Staff-Cabins</h3>
+        <div class="image-container">
+            <img src="cabin1.jpg" alt="ECE Lab" onclick="openLightbox(this)">
+            <img src="cabin2.jpg" alt="ECE Seminar" onclick="openLightbox(this)">
+            <img src="cabin3.jpg" alt="ECE Students Project" onclick="openLightbox(this)">
+            <img src="cabin4.jpg" alt="ECE Students Project" onclick="openLightbox(this)">
+            <img src="cabin5.jpg" alt="ECE Students Project" onclick="openLightbox(this)">
+            <img src="cabin6.jpg" alt="ECE Students Project" onclick="openLightbox(this)">
+            <img src="cabin7.jpg" alt="ECE Students Project" onclick="openLightbox(this)">  
+        </div>
+    </div>
+
+    <div class="image-gallery">
+        <h3>Class-Rooms</h3>
+        <div class="image-container">
+            <img src="class1.jpg" alt="ECE Lab" onclick="openLightbox(this)">
+            <img src="class2.jpg" alt="ECE Seminar" onclick="openLightbox(this)">
+            <img src="class3.jpg" alt="ECE Students Project" onclick="openLightbox(this)">
+            <img src="class4.jpg" alt="ECE Students Project" onclick="openLightbox(this)">
+            <img src="class5.jpg" alt="ECE Students Project" onclick="openLightbox(this)"> 
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" class="lightbox-content">
+</div>
+    <script src="d.js"></script>
+</body>
+</html>
