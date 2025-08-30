@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Route Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #130a0e, #122a52);  /* Gradient background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background: linear-gradient(to right, #af4caa, #2196F3); /* Gradient header */
+            color: white;
+            padding: 20px 0;
+            margin: 0;
+            font-size: 2em;
+            text-transform: uppercase;
+            border-radius: 20px;
+        }
+
+        #map {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background: url('map.png') no-repeat center center;
+            background-size: cover;
+            margin: 20px auto;
+            border: 3px solid #555;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .location {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        #entrance { background-color: #FF5733; }
+        #parking { background-color: #33FF57; }
+        #library { background-color: #337AFF; }
+        #dblock { background-color: #FF33A8; }
+        #playground { background-color: #FFC300; }
+        #boysHostel { background-color: #8E44AD; }
+        #gym { background-color: #16A085; }
+
+        .route-line {
+            position: absolute;
+            background-color: rgb(255, 77, 0);
+            height: 4px;
+            transform-origin: 0% 50%;
+            border-radius: 4px;
+            transition: all 0.5s ease;
+        }
+
+        select, button {
+            margin: 10px;
+            padding: 12px 18px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(to right, #af4caa, #2196F3);  /* Button gradient */
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        select {
+            background: linear-gradient(to right, #ffffff, #f0f4f8);  /* Light gradient for dropdowns */
+            color: #333;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #45a049, #1e88e5);  /* Darker gradient on hover */
+        }
+
+        h3 {
+            color: #4CAF50;
+            background: linear-gradient(to right, #FFC300, #FF5733);  /* Legends gradient */
+            display: inline-block;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        pre {
+            font-size: 18px;
+            color: #fefffe;
+        }
+        #entrance { top: 395px; left: 430px; }
+        #parking { top: 300px; left: 490px; }
+        #library { top: 199px; left: 307px; }
+        #dblock { top: 278px; left: 269px; }
+        #playground { top: 421px; left: 196px; }
+        #boysHostel { top: 357px; left: 93px; }
+        #gym { top: 229px; left: 160px; }
+    </style>
+</head>
+<body>
+    <h1>Campus Route Animation</h1>
+    <div id="map">
+        <div class="location" id="entrance"></div>
+        <div class="location" id="parking"></div>
+        <div class="location" id="library"></div>
+        <div class="location" id="dblock"></div>
+        <div class="location" id="playground"></div>
+        <div class="location" id="boysHostel"></div>
+        <div class="location" id="gym"></div>
+    </div>
+
+    <select id="startPoint">
+        <option value="" disabled selected>Select Start Point</option>
+        <option value="entrance">Entrance</option>
+        <option value="parking">Parking</option>
+        <option value="library">Library</option>
+        <option value="dblock">D-Block</option>
+        <option value="playground">Playground</option>
+        <option value="gym">Gym</option>
+        <option value="boysHostel">Boys Hostel</option>
+    </select>
+
+    <select id="destination">
+        <option value="" disabled selected>Select Destination</option>
+        <option value="entrance">Entrance</option>
+        <option value="parking">Parking</option>
+        <option value="library">Library</option>
+        <option value="dblock">D-Block</option>
+        <option value="playground">Playground</option>
+        <option value="gym">Gym</option>
+        <option value="boysHostel">Boys Hostel</option>
+    </select>
+
+    <button onclick="drawRoute()">Show Route</button>
+
+    <div>
+        <h3>Legends</h3>
+        <pre>🟠: Entrance 🍏: Parking 🔵: Library 🩷: D-Block 🟡: Playground 🟣: Boys Hostel 🟢: Gym</pre>
+    </div>
+
+    <script>
+        // Your JavaScript remains unchanged.
+        const routeMap = {
+            entrance: {
+                parking: ['entrance', 'parking'],
+                library: ['entrance', 'parking', 'library'],
+                dblock: ['entrance', 'parking', 'library', 'dblock'],
+                playground: ['entrance', 'parking','library','dblock','playground'],
+                gym: ['entrance', 'parking', 'library', 'dblock','gym'],
+                boysHostel: ['entrance', 'parking', 'library','dblock','gym','boysHostel']
+            },
+            playground: {
+                parking: ['playground', 'dblock', 'library', 'parking'],
+                library: ['playground', 'dblock', 'library'],
+                dblock: ['playground', 'dblock'],
+                entrance: ['playground', 'dblock','library','parking','entrance'],
+                gym: ['playground', 'dblock', 'gym'],
+                boysHostel: ['playground', 'boysHostel']
+            },
+            gym: {
+                entrance: ['gym', 'dblock', 'library', 'parking', 'entrance'],
+                parking: ['gym', 'dblock', 'library', 'parking'],
+                playground: ['gym', 'boysHostel', 'playground'],
+                dblock: ['gym', 'dblock'],
+                boysHostel: ['gym', 'boysHostel'],
+                library: ['gym', 'dblock', 'library']
+            },
+            boysHostel: {
+                entrance: ['boysHostel', 'playground', 'dblock','library','parking','entrance'],
+                parking: ['boysHostel', 'gym', 'dblock', 'library', 'parking'],
+                playground: ['boysHostel', 'playground'],
+                dblock: ['boysHostel', 'gym', 'dblock'],
+                gym: ['boysHostel', 'gym'],
+                library: ['boysHostel', 'gym', 'dblock', 'library']
+            },
+            parking: {
+                entrance: ['parking', 'entrance'],
+                library: ['parking', 'library'],
+                dblock: ['parking', 'library', 'dblock'],
+                playground: ['parking', 'library', 'dblock','playground'],
+                gym: ['parking', 'library', 'dblock','gym'],
+                boysHostel: ['parking', 'library','dblock', 'gym', 'boysHostel']
+            },
+            library: {
+                entrance: ['library', 'parking', 'entrance'],
+                parking: ['library', 'parking'],
+                dblock: ['library', 'dblock'],
+                playground: ['library', 'dblock', 'playground'],
+                boysHostel: ['library', 'dblock','gym', 'boysHostel'],
+                gym: ['library', 'dblock','gym']
+            },
+            dblock: {
+                entrance: ['dblock', 'library', 'parking', 'entrance'],
+                parking: ['dblock', 'library', 'parking'],
+                playground: ['dblock', 'playground'],
+                boysHostel: ['dblock', 'gym', 'boysHostel'],
+                library: ['dblock', 'library'],
+                gym: ['dblock', 'gym']
+            }
+        };
+
+        function drawRoute() {
+            const start = document.getElementById('startPoint').value;
+            const destination = document.getElementById('destination').value;
+
+            if (!start || !destination) {
+                alert("Please select both start and destination points.");
+                return;
+            }
+
+            if (start === destination) {
+                alert("Start and destination points are the same.");
+                return;
+            }
+
+            const path = routeMap[start][destination];
+            if (!path) {
+                alert("Route not defined for this combination.");
+                return;
+            }
+
+            clearRoute();  // Clear any previous routes
+            animateSegments(path);
+        }
+
+        function animateSegments(path) {
+            for (let i = 0; i < path.length - 1; i++) {
+                drawSegment(path[i], path[i + 1], i * 1000);  // Delay each segment by 1 second
+            }
+        }
+
+        function drawSegment(startId, endId, delay) {
+            const startElem = document.getElementById(startId).getBoundingClientRect();
+            const endElem = document.getElementById(endId).getBoundingClientRect();
+            const mapRect = document.getElementById('map').getBoundingClientRect();
+
+            const x1 = startElem.left + startElem.width / 2 - mapRect.left;
+            const y1 = startElem.top + startElem.height / 2 - mapRect.top;
+            const x2 = endElem.left + endElem.width / 2 - mapRect.left;
+            const y2 = endElem.top + endElem.height / 2 - mapRect.top;
+
+            const length = Math.sqrt((x2 - x1)**2 + (y2 - y1)**2);
+            const angle = Math.atan2(y2 - y1, x2 - x1) * (180 / Math.PI);
+
+            setTimeout(() => {
+                const line = document.createElement('div');
+                line.className = 'route-line';
+                line.style.width = `${length}px`;
+                line.style.left = `${x1}px`;
+                line.style.top = `${y1}px`;
+                line.style.transform = `rotate(${angle}deg)`;
+                document.getElementById('map').appendChild(line);
+            }, delay);
+        }
+
+        function clearRoute() {
+            document.querySelectorAll('.route-line').forEach(line => line.remove());
+        }
+    </script>
+</body>
+</html>

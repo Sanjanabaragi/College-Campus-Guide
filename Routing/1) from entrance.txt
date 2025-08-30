@@ -1,0 +1,67 @@
+1) from entrance
+
+destination = parking ,route entrance ->parking
+destination = library ,route entrance ->parking->library
+destination = dblock ,route entrance ->parking->library->dblock
+destination = playground ,route entrance ->playground
+destination = gym ,entrance ->parking->library->gym
+destination = boys hostel ,entrance ->playground->boyshostel
+
+2) from playground
+
+destination = parking ,route playground ->dblock->library->parking
+destination = library ,route playground ->dblock->library
+destination = dblock ,route playground ->dblock
+destination = entrance ,route playground ->entrance
+destination = gym ,route playground ->dblock->gym 
+destination = boys hostel , route playground ->boyshostel
+
+3) from gym
+
+destination = entrance ,route = gym->dblock->library->parking->entrance
+destination = parking ,route = gym->dblock->library->parking
+destination = playground ,route = gym->boyshostel->playground
+destination = dblock ,route = gym->
+destination = boyshostel ,route = gym->boyshostel
+destination = library ,route = gym->dblock->library
+
+4) from boys hostel
+
+destination = entrance ,route = boys hostel->playground->entrance
+destination = parking ,route = boys hostel->gym->dblock->library->parking
+destination = playground ,route = boys hostel->playground
+destination = dblock ,route = boys hostel->gym->dblock
+destination = gym ,route = boys hostel->gym
+destination = library ,boys hostel = gym->dblock->library
+
+5)from parking
+	destination = entrance,route parking->entrance
+	destination = library,route parking->library
+	destination = dblock,route parking ->library->dblock
+	destination = playground,route parking->entrance->playground
+	destination = gym,route parking->library->gym
+	destination = boys hostel,route parking->library->gym->boys hostel
+
+6) from library 
+	destination = entarnce, route library->parking->entrance
+	destination = parking, route library->parking
+	destination = dblock, route library->dblock
+	destination = playground, route library->dblock->playground
+	destination = boys hostel, route library->gym->boys hostel
+	destination = gym, route library->gym
+
+7) from dblock
+	destination = entrance, route dblock->library->parking->entrance
+	destination = parking, route dblock->library->parking
+	destination = playground, route dblock->playground
+	destination = boys hostel, route  dblock->gym->boys hostel
+	destination = library, route dblock->library
+	destination = gym, route dblock->gym
+
+
+
+
+
+
+
+
