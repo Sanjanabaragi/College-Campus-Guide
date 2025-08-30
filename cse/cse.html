@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer science Department</title>
+    <link rel="stylesheet" href="cse.css">
+</head>
+<body>
+    <header>
+        <h1>COMPUTER SCIENCE DEPARTMENT</h1>
+    </header>
+    <br><br>
+    <div class="video">
+        <video width="320" height="240" controls>
+            <source src="cse.mp4" type="video/mp4">
+            <!-- <source src="movie.ogg" type="video/ogg"> -->
+          Your browser does not support the video tag.
+          </video>
+    </div>
+    <div>
+        <br>
+        <h2>Vision</h2>
+        <p>
+            To provide valuable human resources to the society through Quality Technical Education and Research with moral values
+        </p>
+        <h2>Mission</h2>
+        <p>
+            To educate the students in Computer Science and Engineering by imparting Quality Technical Education and Research to meet the needs of profession and society with ethical values.
+        </p>
+    </div>
+    <div>
+        <h2> About the Department</h2>
+        <p>
+            <img src="https://www.bldeacet.ac.in/faculty-profile/bldeacet-cse-faculty-02.jpg">
+            <pre>
+                Prof (Dr.) Leena Ragha
+                Professor & Head, Dept. of Computer Science
+            </pre>
+            The department of Computer Science and Engineering was established in the year 1985 with an annual intake of 30 students. The present AICTE approved intake of UG program is 180, which runs a full time four year degree program. The main focus of the department is to produce versatile graduates & post graduates making them ready to be employed in industry/government sector/higher education/research & development/ entrepreneurship with strong fundamentals in Computer Science and Engineering domain. A motivated, dedicated, and qualified team of teaching and supporting staff provides unparalleled support and help related to academic, career, sports, and extracurricular activities that a student requires during their course of study.
+        </p>
+    </div>
+    <div class="image-gallery">
+        <h3>Gallery</h3>
+        <div class="image-container">
+            <img src="1.jpg" alt="CSE" onclick="openLightbox(this)">
+            <img src="2.jpg" alt="CSE1" onclick="openLightbox(this)">
+            <img src="3.jpg" alt="Gallery" onclick="openLightbox(this)">
+            <img src="3.1.jpg" alt="Gallery1" onclick="openLightbox(this)">
+            <!-- <img src="DBMS.jpg" alt="DBMS lab" onclick="openLightbox(this)">
+            <img src="MC.jpg" alt="Java lab" onclick="openLightbox(this)"> -->
+        </div>
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close-btn">&times;</span>
+            <img id="lightbox-img" class="lightbox-content">
+            <img id="lightbox-img">
+            <div id="image-details" class="image-details">
+                <!-- Details will be dynamically populated -->
+            </div>
+        </div>
+    </div>
+    <div class="image-gallery">
+        <h3>LABS</h3>
+        <div class="image-container">
+            <!-- <img src="Collage Folder/CSE PHOTOS/1.jpg" alt="ECE Lab" onclick="openLightbox(this)">
+            <img src="Collage Folder/CSE PHOTOS/2.jpg" alt="ECE Seminar" onclick="openLightbox(this)">-->
+            <img src="lab4.jpg" alt="lab1" onclick="openLightbox(this)">
+            <img src="lab5.jpg" alt="lab2" onclick="openLightbox(this)"> 
+            <img src="DBMS.jpg" alt="lab3" onclick="openLightbox(this)">
+            <img src="MC.jpg" alt="lab4" onclick="openLightbox(this)">
+        </div>
+    </div>
+    
+    <script src="cse.js"></script>
+</body>
+</html>
